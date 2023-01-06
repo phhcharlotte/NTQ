@@ -1,0 +1,46 @@
+@media screen and (max-width: 1280px) {
+  .nav {
+    justify-content: end;
+  }
+  #icon {
+    display: block;
+  }
+  .nav-left {
+    display: none;
+  }
+  .top-content,
+  .bottom-content {
+    gap: 20px;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .nav {
+    justify-content: end;
+  }
+  #icon {
+    display: block;
+  }
+  .nav-left {
+    display: none;
+  }
+  .top-content,
+  .bottom-content {
+    gap: 20px;
+    grid-template-columns: auto;
+    grid-template-rows: auto auto auto auto;
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav {
+    justify-content: end;
+  }
+  #icon {
+    display: block;
+  }
+  .nav-left {
+    display: none;
+  }
+}

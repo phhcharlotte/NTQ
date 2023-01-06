@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/header.css" />
+    <link rel="stylesheet" href="./css/contents.css" />
+    <link rel="stylesheet" href="./css/reponsive.css" />
+    <script
+      src="https://kit.fontawesome.com/04842cdd04.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="header">
+        <div class="nav">
+          <ul class="nav-left">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Tax Finalization</a></li>
+            <li><a href="#">Calendar</a></li>
+            <li><a href="#">Working Timesheet</a></li>
+            <li><a href="#">Appraisals</a></li>
+            <li><a href="#">Project</a></li>
+            <li><a href="#">Timesheet</a></li>
+            <li><a href="#">Employees</a></li>
+            <li><a href="#">Assets</a></li>
+            <li><a href="#">Helpdesk</a></li>
+            <li><a href="#">Personal Info</a></li>
+            <li><a href="#">More</a></li>
+          </ul>
+          <ul class="nav-right">
+            <li>
+              <a href=""><i class="fa-regular fa-clock"></i></a>
+            </li>
+            <li>
+              <a href=""><i class="fa-solid fa-comments"></i></a>
+            </li>
+            <li>
+              <a
+                href=""
+                class="myname"
+                style="display: flex; justify-content: center"
+                ><img class="avt" src="./img/avata.jpg" />
+                <span class="infor">Phạm Huy Hoàng</span></a
+              >
+            </li>
+            <li>
+              <label for="nav-input" id="icon">
+                <i class="fa fa-bars"></i>
+              </label>
+            </li>
+          </ul>
+          <input
+            type="checkbox"
+            hidden
+            name=""
+            class="nav_input"
+            id="nav-input"
+          />
+          <!-- <label for="nav-input" class="over"></label> -->
+          <!-- <nav class="nav-reponsive">
+            <label for="nav-input" class="nav-close" style="font-size: 20px">
+              <i class="fa-solid fa-xmark"></i>
+            </label>
+
+            <ul class="nav-reponsive-list">
+              <li><a href="#" class="nav-list">Dashboard</a></li>
+              <li><a href="#" class="nav-list">Tax Finalization</a></li>
+              <li><a href="#" class="nav-list">Calendar</a></li>
+              <li><a href="#" class="nav-list">Working Timesheet</a></li>
+              <li><a href="#" class="nav-list">Appraisals</a></li>
+              <li><a href="#" class="nav-list">Project</a></li>
+              <li><a href="#" class="nav-list">Timesheet</a></li>
+              <li><a href="#" class="nav-list">Employees</a></li>
+              <li><a href="#" class="nav-list">Assets</a></li>
+              <li><a href="#" class="nav-list">Helpdesk</a></li>
+              <li><a href="#" class="nav-list">Personal Info</a></li>
+              <li><a href="#" class="nav-list">More</a></li>
+            </ul>
+          </nav> -->
+        </div>
+      </div>
+      <div class="container">
+        <div class="sidebar" style="background-color: #f9f9f9">
+          <div class="logo">
+            <a href=""><img src="./img/company_logo.png" alt="" /></a>
+          </div>
+          <div class="sidebar-content">
+            <div class="sidebar-title"><a href="">Employees</a></div>
+            <ul class="sidebar-menu">
+              <li><a href="">Employees</a></li>
+              <li><a href="">Adjust Employees</a></li>
+              <li><a href="">Members Birthday</a></li>
+            </ul>
+            <div class="sidebar-title"><a href="">Departments</a></div>
+            <div class="sidebar-title"><a href="">Termination Request </a></div>
+          </div>
+          <div class="sidebar-footer">
+            Powered by <a href=""><span>Odoo </span></a>
+          </div>
+        </div>
+        <div class="wrapper-contents">
+          <div class="contents">
+            <div class="header-content">
+              <div class="control control-right">
+                <div class="title-page" style="height: 50%">
+                  <p>Employees</p>
+                </div>
+                <button class="add">Thêm</button>
+                <div class="over"></div>
+                <div class="formAdd">
+                  <div class="add-Employees">
+                    <input
+                      class="name-text"
+                      type="text"
+                      placeholder="Tên nhân viên"
+                      pattern="[a-z]{1,15}"
+                      title="Username should only contain lowercase, uppercase letters and number "
+                    />
+                    <!-- <input
+                      class="id-text"
+                      placeholder="Trị số"
+                      style="width: 60px"
+                      disabled
+                    /> -->
+                    <!-- <input
+                      class="email-text"
+                      type="email"
+                      placeholder="Email"
+                      disabled
+                    /> -->
+                    <input
+                      type="text"
+                      class="job-text"
+                      placeholder="Vị trị công việc"
+                    />
+                    <button class="add-employees">Thêm Nhân Viên</button>
+                  </div>
+                </div>
+                <div class="header-content-left"></div>
+              </div>
+              <div class="control control-left">
+                <div class="header-content-search">
+                  <input
+                    type="text"
+                    id="searchItem"
+                    class="search"
+                    placeholder="Search..."
+                  />
+                  <i id="icon-fa" class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="header-content-right">
+                  <div class="sort-page">
+                    <button
+                      class="btn-sort"
+                      style="display: flex; align-items: center"
+                    >
+                      <span
+                        ><i id="icon-fa" class="fa-sharp fa-solid fa-filter"></i
+                      ></span>
+                      <p>Fillter</p>
+                      <div class="dropdown">
+                        <div class="sort-A">
+                          <li>Tên A-Z</li>
+                        </div>
+                        <div class="sort-Z">
+                          <li>Tên Z-A</li>
+                        </div>
+                      </div>
+                      <span
+                        ><i id="icon-fa" class="fa-solid fa-caret-down"></i
+                      ></span>
+                    </button>
+                  </div>
+                  <div class="list-employee">
+                    <span class="pageNumber"></span>
+                    <span>/</span>
+                    <span class="totalEmployees"></span>
+                    <button class="btn btn-prev">
+                      <i id="icon-fa" class="fa-solid fa-chevron-left"></i>
+                    </button>
+                    <button class="btn btn-next">
+                      <i id="icon-fa" class="fa-solid fa-chevron-right"></i>
+                    </button>
+
+                    <select name="" id="numberItem" style="height: 40px">
+                      <option value="40">40</option>
+                      <option value="20">20</option>
+                      <option value="10">10</option>
+                      <option value="5">5</option>
+                    </select>
+                    <button class="btn">
+                      <i id="icon-fa" class="fa-solid fa-table"></i>
+                    </button>
+                    <button class="btn">
+                      <i id="icon-fa" class="fa-solid fa-list"></i>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="bottom-content">
+              <div class="wrapper-bottom-content">
+                <!-- <div class="item-employee">
+                  <div class="img-employee">
+                    <img src="./img/image.png" alt="" style="width: 100%" />
+                    <p class="icon-employee">
+                      <span
+                        ><i id="icon-fa" class="fa-solid fa-comments"></i
+                      ></span>
+                      <span
+                        ><i id="icon-fa" class="fa-solid fa-users"></i
+                      ></span>
+                    </p>
+                  </div>
+                  <div class="item-detail-employee">
+                    <div class="item-name" style="padding-left: 10px">
+                      <span>Phạm Huy Hoàng</span>
+                      <li>Intern</li>
+                    </div>
+                    <div class="item-email">
+                      <li style="list-style-type: none">
+                        <i id="icon-fa" class="fa-solid fa-envelope"></i>
+                      </li>
+                      <span>hoang.pham2@ntq-solutions.com.vn</span>
+                    </div>
+                    <div class="item-btn-follow">
+                      <button class="btn-follow">Follow</button>
+                    </div>
+                  </div>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script type="module" src="./javaScripts/search.js"></script> -->
+    <script type="module" src="main.js"></script>
+    <script></script>
+  </body>
+</html>

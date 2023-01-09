@@ -132,7 +132,7 @@ searchInput.onkeyup = (e) => {
 
 addEmployees.onclick = () => {
   if (valueName.value !== "" && valueJob.value !== "") {
-    const format = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+    const format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
     if (format.test(valueName.value)) {
       alert("Tên của bạn chứa ký tự đặc biệt ");
       valueName.value = "";

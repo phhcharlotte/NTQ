@@ -64,6 +64,15 @@
   right: 0;
   background-color: rgba(0, 0, 0, 0.5);
 }
+.add {
+  height: 40px;
+  width: 120px;
+  border-radius: 10px;
+  border: 1px solid #777777;
+}
+.add:hover {
+  background-color: #777777;
+}
 .formAdd {
   position: fixed;
   display: none;
@@ -81,6 +90,16 @@
 .add-Employees {
   display: flex;
   flex-direction: column;
+  row-gap: 10px;
+}
+.add-Employees input {
+  height: 30px;
+}
+.add-Employees input:focus {
+  outline: none;
+}
+.add-Employees button {
+  height: 30px;
 }
 .header-content-search {
   display: flex;
@@ -129,6 +148,10 @@
 .list-employee {
   display: flex;
   align-items: center;
+}
+#numberItem {
+  border-radius: 2px;
+  background-color: #efefef;
 }
 .wrapper-bottom-content {
   display: flex;

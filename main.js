@@ -17,7 +17,6 @@ const over = document.querySelector(".over");
 const formAdd = document.querySelector(".formAdd");
 
 let dataEmployee = EMPLOYEES;
-
 let currenPage = 1;
 let perPage = 40;
 
@@ -27,12 +26,17 @@ function renderListEmployee(listEmployees, currenPage) {
     (currenPage - 1) * perPage + perPage
   );
 
-  pageNumber.innerHTML = `${(currenPage - 1) * perPage + 1}-${
-    (currenPage - 1) * perPage + perPage
-  }`;
+  let totalPage = Math.ceil(listEmployees.length / perPage);
+  let startNumber = (currenPage - 1) * perPage + 1;
+  let endNumber =
+    listEmployees.length % perPage !== 0 && totalPage === currenPage
+      ? (currenPage - 1) * perPage + (listEmployees.length % perPage)
+      : (currenPage - 1) * perPage + perPage;
   totalEmployee.innerHTML = `${listEmployees.length}`;
+  pageNumber.innerHTML = `${startNumber}-${endNumber}`;
 
   numberItem.onchange = (e) => {
+    currenPage = 1;
     perPage = Number(e.target.value);
     renderListEmployee(listEmployees, currenPage);
   };

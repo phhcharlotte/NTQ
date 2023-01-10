@@ -118,7 +118,7 @@ function renderListEmployee(listEmployees, currenPage) {
 
 renderListEmployee(dataEmployee, currenPage);
 
-searchInput.onkeyup = (e) => {
+searchInput.oninput = (e) => {
   currenPage = 1;
   let valueInput = e.target.value.toLowerCase();
   let searchListValueName = dataEmployee.filter(
@@ -129,11 +129,18 @@ searchInput.onkeyup = (e) => {
 
   renderListEmployee(searchListValueName, currenPage);
 };
+const format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+const validate = (name) => {
+  if (format.test(name)) {
+    return "Tên của bạn chứa ký tự đặc biệt ";
+  }
+  return " ";
+};
 
 addEmployees.onclick = () => {
   if (valueName.value !== "" && valueJob.value !== "") {
-    const format = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-    if (format.test(valueName.value)) {
+    if (validate(valueName.value)) {
       alert("Tên của bạn chứa ký tự đặc biệt ");
       valueName.value = "";
       valueJob.value = "";
@@ -144,7 +151,7 @@ addEmployees.onclick = () => {
       const maxID = Math.max.apply(Math, listID);
       const count = maxID + 1;
 
-      const jobNewEmployee = valueJob.value;
+      const jobNewEmployee = valueJob.value.trim();
 
       let mangEmail =
         nameValue.length > 1
@@ -198,7 +205,7 @@ addEmployees.onclick = () => {
           return Number(a) - Number(b);
         });
         newName =
-          inputValueName + " " + (Number(arrNumber[arrNumber.length - 1]) + 1); // Đặng Thị Minh Hòa 5
+          inputValueName + " " + (Number(arrNumber[arrNumber.length - 1]) + 1);
       }
 
       const arrNumberEmail = [0];
